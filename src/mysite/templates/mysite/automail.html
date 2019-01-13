@@ -1,0 +1,21 @@
+{% extends 'mysite/base.html' %}
+
+
+{% block content %}
+<div class="container" style="margin-top:100px">
+    <div class="col-sm-6 mx-auto" style="margin-top:30px">
+        <form action="{% url 'sendmail' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group row">
+                <div class="col-10">
+                    <input name='visitoremail' class="form-control" type="email" id="example-email-input" required
+                           placeholder="Try your Email Here">
+                </div>
+                <button type="submit" class="btn btn-primary float-right">Submit</button>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+{% endblock %}

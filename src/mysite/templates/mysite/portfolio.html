@@ -1,0 +1,85 @@
+{% extends 'mysite/base.html' %}
+
+{% load static %}
+{% block content %}
+<div class="container" style="margin-top:100px">
+    <div class="card-deck">
+        <div class="card">
+            <img src="{% static 'mysite/images/tn.png' %}" class="card-img-top" alt="TravelTamilnadu">
+            <div class="card-body">
+
+                <h5 class="card-title">Travel Tamilnadu</h5>
+                <p class="card-text">Exploring places around Tamilnadu</p>
+                <p class="card-text">
+                    <a href="https://traveltn.github.io/" target="_blank">
+                        <small class="text-muted">Visit the Website</small>
+                    </a>
+                </p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{% static 'mysite/images/fin.png' %}" class="card-img-top" alt="FingerPrint Authentication">
+            <div class="card-body">
+                <h5 class="card-title">FingerPrintAuthentication</h5>
+                <p class="card-text">To hide confidential texts in Android Application.</p>
+                <p class="card-text">
+                    <small class="text-muted">Soon</small>
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{% static 'mysite/images/bb.png' %}" class="card-img-top" alt="This site">
+            <div class="card-body">
+                <h5 class="card-title">All about Blood</h5>
+                <p class="card-text">Simple Website with Hospital and Receivers UI</p>
+                <p class="card-text">
+                    <a href="https://bloodon.000webhostapp.com/" target="_blank">
+                        <small class="text-muted">Visit the Website</small>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container" style="margin-top:50px">
+    <div class="card-deck">
+        <div class="card">
+            <img src="{% static 'mysite/images/key.png' %}" class="card-img-top" alt="TravelTamilnadu">
+            <div class="card-body">
+
+                <h5 class="card-title">Python Keylogger</h5>
+                <p class="card-text">Simple Keystroke Listener Logger</p>
+                <p class="card-text">
+                    <a href="https://github.com/sasidharank/PythonKey" target="_blank">
+                        <small class="text-muted">Source Code</small>
+                    </a>
+                </p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="{% static 'mysite/images/mail.png' %}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Python AutoMail</h5>
+                <p class="card-text">Tried to send automated Gmail.</p>
+                <p class="card-text">
+                    <a href="{% url 'automail' %}">
+                        <small class="text-muted">You Can Try It Here</small>
+                    </a>
+                </p>
+            </div>
+        </div>
+
+
+        <div class="container" align="center" style="margin-top:50px">
+            <a href="{% url 'contact' %}">
+                <button type="submit" class="btn btn-secondary mb-2">Contact me</button>
+            </a>
+
+        </div>
+    </div>
+</div>
+    {% endblock %}
